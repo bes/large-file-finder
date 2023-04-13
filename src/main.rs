@@ -97,7 +97,13 @@ fn find_all_files_and_directories(dir: &mut Dir) -> Result<(), Box<dyn Error>> {
                     Some(t) => t,
                 };
 
-                let metadata = entry.metadata().unwrap();
+                let metadata = match entry.metadata() {
+                    Ok(metadata) => metadata,
+                    Err(e) => {
+                        println!("{e}");
+                        return children;
+                    }
+                };
                 if metadata.is_dir() {
                     let mut new_dir = Dir::new(entry_path);
                     find_all_files_and_directories(&mut new_dir).unwrap();
