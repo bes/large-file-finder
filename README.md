@@ -14,7 +14,7 @@ cargo install --git https://github.com/bes/large-file-finder
 Given a directory structure like this
 
 ```
-lff% eza -lT
+% eza -lT
       .
       ├── big_file
   23G │  └── big_file.dat
@@ -25,7 +25,7 @@ lff% eza -lT
 We can run `lff` to find the largest directories
 
 ```
-lff% lff .
+% lff .
 21 GiB   d .
 21 GiB   d ./big_file
 21 GiB   f ./big_file/big_file.dat
@@ -36,7 +36,7 @@ Largest child: 21 GiB
 ## Options
 
 ```
-lff% lff --help
+% lff --help
 Large file finder 1.0
 
 USAGE:
