@@ -17,7 +17,7 @@ Given a directory structure like this
 lff% eza -lT
       .
       ├── big_file
-  23G │  └── large_file.dat
+  23G │  └── big_file.dat
       └── small_file
   71M    └── small_file.dat
 ```
@@ -28,7 +28,7 @@ We can run `lff` to find the largest directories
 lff% lff .
 21 GiB   d .
 21 GiB   d ./big_file
-21 GiB   f ./big_file/large_file.dat
+21 GiB   f ./big_file/big_file.dat
 Total size: 21 GiB
 Largest child: 21 GiB
 ```
