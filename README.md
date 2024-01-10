@@ -37,7 +37,7 @@ Largest child: 21 GiB
 
 ```
 % lff --help
-Large file finder 1.0
+Large file finder 0.2.0
 
 USAGE:
     lff [OPTIONS] <DIRECTORY>
@@ -51,6 +51,9 @@ FLAGS:
 
 
 OPTIONS:
+    -i, --ignore <ignore>
+            Respects ignore files when true, counts all files when false (default). [env: IGNORE=]  [default: false]
+
     -p, --percent <percent>
             Show all files and directories that are larger than X% of the largest found file. [env: PERCENT=]  [default:
             50]
